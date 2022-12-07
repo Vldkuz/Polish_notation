@@ -13,7 +13,6 @@ out="";
 for (let i=0;i<str.length;++i)
 {
     if ((IsOperation(str[i]) && GetPri(str[i]) > GetPri(stack[stack.length-1])) || str[i]=="(" ) stack.push(str[i]);
-    else if (IsOperation(str[i]) && GetPri(str[i]) > GetPri(stack[stack.length-1])) stack.push(str[i]);
     else if (!isNaN(str[i]) && str[i]!=" " || str[i]==".") out+=str[i];
     else if (str[i]==" " && out[out.length - 1]!=" ") out+=str[i];
     else if (str[i]==")") {
